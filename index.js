@@ -18,7 +18,7 @@ class House {
 
     getAddress = () => this.address;
     getResidents = () => this.residents;
-    addResident = (resident) => this.residents.push(resident)
+    addResident = (resident) => this.residents.push(resident);
 }
 
 // Creating a person named John
@@ -30,10 +30,8 @@ const jane = new Person("Jane", 25, "Female", "Blonde");
 // Creating a person named Michael
 const michael = new Person("Michael", 40, "Male", "Black");
 
-const house = new House('123 Fake Street', [john, jane, michael])
-console.log(house.getResidents());
+const house = new House("123 Main Street", [john, jane, michael]);
+console.log(house);
 
-// Creating a person named Emily
-const emily = new Person("Emily", 22, "Female", "Red");
-house.addResident(emily);
-console.log(house.getResidents());
+
+

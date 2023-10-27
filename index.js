@@ -33,5 +33,6 @@ const michael = new Person("Michael", 40, "Male", "Black");
 const house = new House("123 Main Street", [john, jane, michael]);
 console.log(house);
 
-
-
+const emily = new Person("Emily", 22, "Female");
+house.addResident(emily);
+console.log(house);

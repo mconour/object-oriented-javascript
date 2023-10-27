@@ -19,7 +19,6 @@ class House {
     getAddress = () => this.address;
     getResidents = () => this.residents;
     addResident = (resident) => this.residents.push(resident)
-
 }
 
 // Creating a person named John
@@ -36,5 +35,5 @@ console.log(house.getResidents());
 
 // Creating a person named Emily
 const emily = new Person("Emily", 22, "Female", "Red");
-house.addResident(emily)
+house.addResident(emily);
 console.log(house.getResidents());

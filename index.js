@@ -13,7 +13,9 @@ class Book {
 }
 
 class Library {
-    constructor(params) {
-        
+    constructor() {
+        this.books = [];
     }
+
+    addBook = (book) => this.books.push(book); 
 }

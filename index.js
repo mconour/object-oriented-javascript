@@ -3,36 +3,32 @@ class Person {
         this.name = name;
         this.age = age;
         this.gender = gender;
+        this.job = "";
     }
 
     getName = () => this.name;
     getAge = () => this.age;
     getGender = () => this.gender;
+    setJob = (job) => this.job = job;
 }
 
 class House {
-    constructor(address, residents) {
+    constructor(address, price, residents) {
         this.address = address;
+        this.price = price;
         this.residents = residents;
     }
 
     getAddress = () => this.address;
+    getPrice = () => this.price;
     getResidents = () => this.residents;
+    
+    
     addResident = (resident) => this.residents.push(resident);
 }
 
-// Creating a person named John
-const john = new Person("John", 30, "Male", "Brown");
-
-// Creating a person named Jane
-const jane = new Person("Jane", 25, "Female", "Blonde");
-
-// Creating a person named Michael
-const michael = new Person("Michael", 40, "Male", "Black");
-
-const house = new House("123 Main Street", [john, jane, michael]);
-console.log(house);
-
-const emily = new Person("Emily", 22, "Female");
-house.addResident(emily);
-console.log(house);
+const Michael = new Person('Michael', 19, 'Male')
+const house = new House("123 Main Street", 200000, []);
+Michael.setJob('Developer')
+house.addResident(Michael);
+console.log(house.getResidents());

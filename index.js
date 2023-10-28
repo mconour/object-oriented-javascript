@@ -22,13 +22,23 @@ class House {
     getAddress = () => this.address;
     getPrice = () => this.price;
     getResidents = () => this.residents;
-    
-    
+
+
     addResident = (resident) => this.residents.push(resident);
 }
 
-const Michael = new Person('Michael', 19, 'Male')
-const house = new House("123 Main Street", 200000, []);
-Michael.setJob('Developer')
-house.addResident(Michael);
-console.log(house.getResidents());
+class Programmer extends Person {
+    constructor(name, age, company, salary, language) {
+        super(name, age);
+        this.company = company;
+        this.salary = salary;
+        this.language = language;
+    }
+
+    sayHi = () => {
+        console.log(`Hello, I'm a programmer! My name is ${this.getName()} and I'm ${this.getAge()}. I work for ${this.company}`);
+    }
+}
+
+let programmer = new Programmer('Michael', 19, 'Twitch', 1000000, 'JavaScript');
+programmer.sayHi();

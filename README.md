@@ -40,7 +40,7 @@ To run the code, you can include it in an HTML file and open it in a web browser
 
 ## Author
 
-This code was written by [Your Name].
+This code was written by yours truly.
 
 Feel free to use and modify the code for your own book and library management needs.
 

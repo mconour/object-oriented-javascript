@@ -1,47 +1,47 @@
-# Class Definitions
+# Book Library
 
-In this code snippet, we define two classes: `Person` and `House` to model individuals and their residence. Here's a brief description of each class:
+## Description
 
-## `Person`
+This JavaScript code defines a simple Book and Library management system. The code is organized into two classes:
 
-The `Person` class represents an individual and includes the following properties:
-- `name`: The person's name.
-- `age`: The person's age.
-- `gender`: The person's gender.
+1. **Book**: The `Book` class represents a book with properties such as `title`, `author`, and `publicationYear`. It is used to create book instances.
 
-It also provides methods to access these properties:
-- `getName()`: Returns the person's name.
-- `getAge()`: Returns the person's age.
-- `getGender()`: Returns the person's gender.
+2. **Library**: The `Library` class represents a library that can store and manage a collection of books. It has methods for adding books to the library, removing books from the library, and listing all the books in the library.
 
-## `House`
+## Usage
 
-The `House` class represents a residential property and includes the following properties:
-- `address`: The address of the house.
-- `residents`: An array containing the residents of the house.
-
-It offers methods to interact with the house's properties:
-- `getAddress()`: Returns the address of the house.
-- `getResidents()`: Returns the array of residents.
-- `addResident(resident)`: Adds a resident to the `residents` array.
-
-# Usage
-
-In the provided code, we create instances of the `Person` class and add them as residents to an instance of the `House` class. We also demonstrate how to access and modify the list of residents.
+Here's how you can use this code:
 
 ```javascript
-const john = new Person("John", 30, "Male");
-const jane = new Person("Jane", 25, "Female");
-const michael = new Person("Michael", 40, "Male");
+// Create a few book instances
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
 
-const house = new House('123 Fake Street', [john, jane, michael]);
-console.log(house.getResidents());
+// Create a library instance
+const library = new Library();
 
-const emily = new Person("Emily", 22, "Female");
-house.addResident(emily);
-console.log(house.getResidents());
+// Add books to the library
+library.addBook(book1);
+library.addBook(book2);
+
+// List the books in the library
+library.listBooks();
+
+// Remove a book from the library
+library.removeBook(book1);
+
+// List the remaining books in the library
+library.listBooks();
 ```
 
-In this example, John, Jane, and Michael are added as initial residents to the house, and then Emily is added to the list of residents.
+## How to Run
 
-Feel free to use and modify this code in your projects to represent people and their residence in a structured way.
+To run the code, you can include it in an HTML file and open it in a web browser or use a JavaScript runtime environment. Simply copy the code into an HTML file or a JavaScript file and execute it.
+
+## Author
+
+This code was written by [Your Name].
+
+Feel free to use and modify the code for your own book and library management needs.
+
+Enjoy organizing your book collection! :books:

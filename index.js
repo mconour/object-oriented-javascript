@@ -1,9 +1,3 @@
-/* 
-You can create two classes, Library and Book, where a library contains a collection of books. 
-The Library class can have methods for adding books, removing books, and listing all the books it contains. 
-The Book class can have properties like title, author, and publication year.
-*/
-
 class Book {
     constructor(title, author, publicationYear) {
         this.title = title;
@@ -31,3 +25,23 @@ class Library {
         });
     }
 }
+
+// Create a few book instances
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+
+// Create a library instance
+const library = new Library();
+
+// Add books to the library
+library.addBook(book1);
+library.addBook(book2);
+
+// List the books in the library
+library.listBooks();
+
+// Remove a book from the library
+library.removeBook(book1);
+
+// List the remaining books in the library
+library.listBooks();
